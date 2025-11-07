@@ -1,0 +1,61 @@
+# ===================================
+# PYTHON
+# ===================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.egg-info/
+dist/
+build/
+
+# ===================================
+# NODE / SERVERLESS
+# ===================================
+node_modules/
+.npm/
+serverless/
+.serverless/
+package-lock.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================================
+# ENVIRONMENT FILES
+# ===================================
+.env
+.env.*
+!.env.example
+
+# ===================================
+# EDITOR / OS FILES
+# ===================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===================================
+# TEST / COVERAGE
+# ===================================
+.coverage
+coverage/
+.pytest_cache/
+nosetests.xml
+test-results.xml

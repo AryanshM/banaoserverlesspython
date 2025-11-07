@@ -1,0 +1,32 @@
+service: email-api
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: us-east-1
+  environment:
+    SOURCE_EMAIL: aryanshbanao@gmail.com 
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - ses:SendEmail
+            - ses:SendRawEmail
+          Resource: "*"
+
+plugins:
+  - serverless-offline
+
+
+functions:
+  api:
+    handler: handler.handler
+    timeout: 30
+    events:
+      - httpApi:
+          path: /send-email
+          method: post
+      - httpApi:
+          path: /test-aws
+          method: get
